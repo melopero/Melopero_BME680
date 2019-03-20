@@ -84,14 +84,8 @@ class BME680():
         '''returns the last measured gas resistance in '''
         return c_float(self._cfuncs.GetLastGasResistanceMeasurement()).value
     
-    
-if __name__ == '__main__':
-    dev = BME680()
-    dev.set_parameters()
-    while(True):
-        dev.update_data()
-        #dev._cfuncs.PrintValues()
-        print('T: {:.2f}C,H: {:.2f}%rH, P: {:.2f}hPa'.format(dev.get_temperature(), dev.get_humidity(), dev.get_pressure()))
-        print('Gas resistance: {:.2f}'.format(dev.get_gas_resistance()))
+    def close_connection(self):
+        self._cfuncs.CloseI2CConnection()
+        return
 
         
