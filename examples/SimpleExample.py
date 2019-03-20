@@ -4,7 +4,7 @@
 @author: Leonardo La Rocca
 """
 
-import melopero_bme680.BME680 as mp
+import melopero_bme680 as mp
 
 sensor = mp.BME680()
 sensor.set_parameters()
