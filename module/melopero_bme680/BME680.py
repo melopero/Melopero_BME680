@@ -12,7 +12,6 @@ import os
 #   api
 #       -bme680_api.*.so
 lib_loc = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-lib_loc = os.path.join(lib_loc, 'api')
 lib_file = ''
 for file in os.listdir(lib_loc):
     if file.startswith('bme680_api') and file.endswith('.so'):

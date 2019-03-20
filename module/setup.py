@@ -8,10 +8,10 @@ import setuptools
 import os
 
 sources_files = []
-lib_dir = 'api'
-for file in os.listdir(os.path.join(os.getcwd(), lib_dir)):
+lib_dir = ['api']
+for file in os.listdir(os.path.join(os.getcwd(), lib_dir[0])):
     if file.endswith('.c'):
-        sources_files.append(os.path.join(lib_dir,file))
+        sources_files.append(os.path.join(lib_dir[0],file))
 
 extension = setuptools.Extension(
     'bme680_api',

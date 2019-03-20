@@ -1,0 +1,3 @@
+include api/bme680.h
+include api/bme680_defs.h
+
