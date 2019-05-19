@@ -12,6 +12,7 @@ import os
 #   api
 #       -bme680_api.*.so
 lib_loc = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+#lib_loc = os.path.join(lib_loc, 'api')
 lib_file = ''
 for file in os.listdir(lib_loc):
     if file.startswith('bme680_api') and file.endswith('.so'):
@@ -56,8 +57,7 @@ class BME680():
         self._cfuncs.GetLastTemperatureMeasurement.restype = c_float
         self._cfuncs.GetLastHumidityMeasurement.restype = c_float
         self._cfuncs.GetLastPressureMeasurement.restype = c_float
-        self._cfuncs.GetLastGasResistanceMeasurement.restype = c_float
-        
+        self._cfuncs.GetLastGasResistanceMeasurement.restype = c_float        
     
     def set_parameters(self, temp_os = BME680_OS_8X, hum_os = BME680_OS_2X, 
                        press_os = BME680_OS_4X, filter_size = BME680_FILTER_SIZE_3):
@@ -81,7 +81,7 @@ class BME680():
         return c_float(self._cfuncs.GetLastPressureMeasurement()).value
     
     def get_gas_resistance(self):
-        '''returns the last measured gas resistance in '''
+        '''returns the last measured gas resistance in Ohms'''
         return c_float(self._cfuncs.GetLastGasResistanceMeasurement()).value
     
     def close_connection(self):
