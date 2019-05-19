@@ -24,9 +24,9 @@ extension = setuptools.Extension(
 
 setuptools.setup(
     name="melopero_bme680",
-    version="0.1.0",
+    version="0.1.1",
     description="A module to easily access Melopero's BME680 sensor's features",
-    url="https://github.com/melopero/Melopero_VL53L1X/tree/master/module",
+    url="https://github.com/melopero/Melopero_BME680",
     author="Melopero",
     author_email="info@melopero.com",
     license="MIT",
