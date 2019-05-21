@@ -66,3 +66,6 @@ for i in range(100):
 print('Closing connection')
 sensor.close_connection()
 ```
+### Attention
+
+The module is written in `python3` and by now supports only `python3`, remember to use always `sudo pip3 install melopero-bme680` when you install the module and `sudo python3 your_code.py` when you run the code.
