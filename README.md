@@ -1,5 +1,5 @@
 # Melopero BME680
-![melopero logo](images/sensor.jpg?raw=true)
+![melopero logo](https://www.melopero.com/wp-content/uploads/2019/05/IMG_0515.jpg)
 
 ## Getting Started
 ### Prerequisites
